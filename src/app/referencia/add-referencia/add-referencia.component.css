@@ -1,0 +1,11 @@
+.example-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 5%;
+}
+
+.example-container > *, .example-button-row {
+  width: 40%;
+  margin-left: 25%;
+}
+

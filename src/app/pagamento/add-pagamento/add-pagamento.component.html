@@ -1,0 +1,15 @@
+<form (ngSubmit)="efectuarPagamento(efectuaPag)" #efectuaPag="ngForm">
+  <div class="example-container">
+      <mat-form-field>
+        <input matInput type="number" placeholder="Referência" name="referencia" [(ngModel)]="dadosPagamento.referencia">
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="number" placeholder="Valor" name="valor" [(ngModel)]="dadosPagamento.valor">
+      </mat-form-field>
+  </div>
+  <div class="example-button-row">
+    <button mat-flat-button color="primary" type="submit">Confirmar</button>
+    <button mat-flat-button color="warn" style="float: right">Cancelar</button>
+  </div>
+</form>
