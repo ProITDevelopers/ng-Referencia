@@ -1,6 +1,6 @@
 export interface Referencia {
   valor?: number;
-  dataExpiracao: string | null;
+  dataExpiracao: Date | any;
   entidade: number;
   infPessoal: {
     descricao: string | null;

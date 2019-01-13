@@ -27,6 +27,8 @@ export class AddPagamentoComponent implements OnInit {
           panelClass: ['alert-success']
         });
         console.log(this.dadosPagamento);
+        this.dadosPagamento.valor = null;
+        this.dadosPagamento.referencia = null;
       },
       err => {
         this.snackBar.open(`Ocorreu um erro a efectuar pagamento`, `OK`, {

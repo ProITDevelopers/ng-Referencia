@@ -2,18 +2,18 @@
    <h3 style="text-align:center;">Gerar Referência</h3>
     <div class="example-container">
 
-    <mat-form-field class="example-form-field">
-      <input matInput type="number" placeholder="entidade" name="entidade" [(ngModel)]="dadosReferencia.entidade" disabled>
-    </mat-form-field>
+      <mat-form-field class="example-form-field">
+        <input matInput type="number" placeholder="entidade" name="entidade" [(ngModel)]="dadosReferencia.entidade" disabled>
+      </mat-form-field>
 
-    <mat-form-field>
-      <input matInput type="number" placeholder="Valor" name="valor" [(ngModel)]="dadosReferencia.valor" required>
-    </mat-form-field>
+      <mat-form-field>
+        <input matInput type="number" placeholder="Valor" name="valor" [(ngModel)]="dadosReferencia.valor" required>
+      </mat-form-field>
 
-</div>
-<div class="example-button-row">
-  <button mat-flat-button color="primary" type="submit">Confirmar</button>
-  <button mat-flat-button color="warn" style="float: right">Cancelar</button>
-</div>
+  </div>
+  <div class="example-button-row">
+    <button mat-flat-button color="primary" type="submit">Confirmar</button>
+    <button mat-flat-button color="warn" style="float: right;" (click)="onCancelar()" type="button">Cancelar</button>
+  </div>
 
 </form>
