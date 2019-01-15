@@ -13,10 +13,10 @@ import { Router } from '@angular/router';
   providers: [DatePipe]
 })
 export class AddReferenciaComponent implements OnInit {
-  hoje: any;
+  hoje = new Date;
   dadosReferencia: Referencia = {
     valor: null,
-    dataExpiracao: '2019-01-16',
+    dataExpiracao: '2019-01-20',
     entidade: 99976  ,
     infPessoal: {
       descricao: 'criando',
@@ -29,8 +29,7 @@ export class AddReferenciaComponent implements OnInit {
   constructor(private apiReferencia: ReferenciaService,
               private snackBar: MatSnackBar,
               private datePipe: DatePipe,
-              private router: Router) {
-            }
+              private router: Router) {}
 
   gerarReferencia(formReferencia: NgForm): void {
     this.apiReferencia.postReferencia(this.dadosReferencia).subscribe(
@@ -51,13 +50,18 @@ export class AddReferenciaComponent implements OnInit {
     });
   }
 
-  onCancelar(){
-    this.router.navigate['/principal']
+
+  onCancelar() {
+    // tslint:disable-next-line:no-unused-expression
+    this.router.navigate['/principal'];
   }
 
-  private dataHoje(): Date {
-    this.hoje = this.datePipe.transform(new Date, 'yyyy-MM-dd');
-    return this.hoje;
+  addDays(date: Date, dias: number): Date {
+    date.setDate(date.getDate() + dias);
+    return date;
+  }
+  transformaData() {
+    return this.addDays(this.hoje, 3).toLocaleDateString();
   }
   ngOnInit() {
   }

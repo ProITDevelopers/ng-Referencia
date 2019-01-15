@@ -24,7 +24,7 @@ export class ReferenciaService {
 
   createBasicAuth() {
     // tslint:disable-next-line:max-line-length
-    const cabecalho = 'eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1NDczNjk0NjcsImlzcyI6IlBST1BST1giLCJzdWIiOiJFc2FsZGlubyIsImV4cCI6MTU0NzQ1NTg2N30.tWtNkqL9lnqKvzlnglM57yTOO2mOB_MgZ2nf3GI86E0fCsVkLjEUXo7A4uvT4VWzU-R5hSSHdsfVxyAxDmpt7A';
+    const cabecalho = 'eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1NDc1NDQ4MjgsImlzcyI6IlBST1BST1giLCJzdWIiOiJFc2FsZGlubyIsImV4cCI6MTU0NzYzMTIyOH0.ej7-4lTL8zH0uuYOJ0kgHsBCPAYFFf23nUlIPPAz4aXv5lOgRNkIpsQHESUY5xsi_WKSFrSreEQ042VbA93KPw';
     const authHeader = 'Bearer ' + (cabecalho);
     return authHeader;
   }
