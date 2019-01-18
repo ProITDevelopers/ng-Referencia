@@ -12,6 +12,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatDatepickerModule, MatNativeDateModule } from '@angular/material';
 
 @NgModule({
   declarations: [],
@@ -28,6 +29,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatTabsModule,
     MatSnackBarModule,
     MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     FlexLayoutModule
   ],
   exports: [
@@ -42,6 +45,8 @@ import { MatExpansionModule } from '@angular/material/expansion';
     MatTabsModule,
     MatSnackBarModule,
     MatExpansionModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
     FlexLayoutModule
   ]
 })

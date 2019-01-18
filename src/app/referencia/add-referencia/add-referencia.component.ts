@@ -14,10 +14,12 @@ import { Router } from '@angular/router';
 })
 export class AddReferenciaComponent implements OnInit {
   hoje = new Date;
+  minDate = new Date(this.hoje);
+
+
   dadosReferencia: Referencia = {
     valor: null,
-    dataExpiracao: '2019-01-20',
-    // entidade: 99976  ,
+    dataExpiracao: this.transformaData(),
     infPessoal: {
       descricao: 'criando',
       nome: 'Media Rumo',
@@ -61,7 +63,7 @@ export class AddReferenciaComponent implements OnInit {
     return date;
   }
   transformaData() {
-    return this.addDays(this.hoje, 3).toLocaleDateString();
+    return this.addDays(this.hoje, 1).toLocaleDateString;
   }
   ngOnInit() {
   }

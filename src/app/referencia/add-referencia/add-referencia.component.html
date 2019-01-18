@@ -2,8 +2,12 @@
    <h3 style="text-align:center;">Gerar Referência</h3>
     <div class="example-container">
 
-      <mat-form-field class="example-form-field">
-        <input matInput type="number" placeholder="Data de Expiração" name="dataExpiracao" [(ngModel)]="dadosReferencia.dataExpiracao" disabled>
+      <mat-form-field>
+        <input matInput [matDatepicker]="picker" placeholder="Escolher data de Expiração"
+                name="dataExpiracao" [(ngModel)]="dadosReferencia.dataExpiracao"
+                [min]="minDate" disabled>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker disabled="false"></mat-datepicker>
       </mat-form-field>
 
       <mat-form-field>
@@ -13,7 +17,6 @@
   </div>
   <div class="example-button-row">
     <button mat-flat-button color="primary" type="submit">Confirmar</button>
-    <button mat-flat-button color="warn" style="float: right;" (click)="onCancelar()" type="button">Cancelar</button>
   </div>
 
 </form>
