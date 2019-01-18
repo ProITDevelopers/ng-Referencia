@@ -17,7 +17,7 @@ export class AddReferenciaComponent implements OnInit {
   dadosReferencia: Referencia = {
     valor: null,
     dataExpiracao: '2019-01-20',
-    entidade: 99976  ,
+    // entidade: 99976  ,
     infPessoal: {
       descricao: 'criando',
       nome: 'Media Rumo',

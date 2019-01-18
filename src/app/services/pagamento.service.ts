@@ -13,18 +13,18 @@ export class PagamentoService {
   constructor(private http: HttpClient) { }
 
   postPagamento(pagamento: Pagamento): Observable<Pagamento> {
-    /*const authHeader = this.createBasicAuth();
+    const authHeader = this.createBasicAuth();
     const header = new HttpHeaders({
       Authorization: authHeader
-    });*/
-    return this.http.post<Pagamento>(this.efectuar_pagamento_url, pagamento/*,
-      {headers : header}*/);
+    });
+    return this.http.post<Pagamento>(this.efectuar_pagamento_url, pagamento,
+      {headers : header});
   }
 
   createBasicAuth() {
     // tslint:disable-next-line:max-line-length
-    const cabecalho = 'eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1NDcxMTE0NzEsImlzcyI6IlBST1BST1giLCJzdWIiOiJFc2FsZGlubyIsImV4cCI6MTU0NzE5Nzg3MX0.euegJ_657XkS8wDkKyuIpTtj9S41HnSNqfz1s-pp9NXk1ej__CSe10XR0fETufkxB2s6YiJlX-JQzPjG2mKGTQ';
-    const authHeader = 'Bearer ' + (cabecalho);
+    const cabecalho = '4c890bafb7034fa1b57c5bad9b0b380e';
+    const authHeader = 'key ' + (cabecalho);
     return authHeader;
   }
 }
