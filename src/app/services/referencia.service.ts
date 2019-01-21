@@ -24,7 +24,7 @@ export class ReferenciaService {
 
   createBasicAuth() {
     // tslint:disable-next-line:max-line-length
-    const cabecalho = '4c890bafb7034fa1b57c5bad9b0b380e';
+    const cabecalho = '3f44e0a0120743e4883f3653a2c54999';
     const authHeader = 'key ' + (cabecalho);
     return authHeader;
   }
