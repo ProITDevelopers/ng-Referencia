@@ -8,3 +8,7 @@
   width: 60%;
   margin-left: 20%;
 }
+.aviso {
+  color: rgba(125, 125, 125, 0.5);
+  float: right;
+}

@@ -15,7 +15,7 @@ import { Router } from '@angular/router';
 export class AddReferenciaComponent implements OnInit {
   hoje = new Date;
   minDate = new Date(this.hoje.setDate(this.hoje.getDate() + 2));
-
+  estado = false;
 
   dadosReferencia: Referencia = {
     valor: null,
@@ -36,7 +36,7 @@ export class AddReferenciaComponent implements OnInit {
   gerarReferencia(formReferencia: NgForm): void {
     this.apiReferencia.postReferencia(this.dadosReferencia).subscribe(
       res => {
-        this.snackBar.open(`Referência Gerada com Sucesso!`, `OK`, {
+        this.snackBar.open(`A sua referência é:` + `res.referencia`, `OK`, {
           duration: 5000,
           panelClass: ['alert-success']
         });
@@ -59,6 +59,7 @@ export class AddReferenciaComponent implements OnInit {
   transformaData() {
     return this.addDays(this.hoje, 2).toLocaleDateString;
   }
+
   ngOnInit() {
   }
 
