@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReferenciaService {
-  private principal_url = 'https://proxy-reference.herokuapp.com';
-  private gerar_Referencia_url = `${this.principal_url}/reference`;
+  private principal_url = 'https://proxy-reference.herokuapp.com/reference';
+ // private gerar_Referencia_url = `${this.principal_url}/reference`;
 
   constructor(private http: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class ReferenciaService {
     const header = new HttpHeaders({
       Authorization: authHeader
     });
-    return this.http.post<Referencia>(this.gerar_Referencia_url, referencia,
+    return this.http.post<Referencia>(this.principal_url, referencia,
       {headers : header});
   }
 

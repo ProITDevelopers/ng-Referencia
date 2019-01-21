@@ -14,16 +14,16 @@ import { Router } from '@angular/router';
 })
 export class AddReferenciaComponent implements OnInit {
   hoje = new Date;
-  minDate = new Date(this.hoje);
+  minDate = new Date(this.hoje.setDate(this.hoje.getDate() + 2));
 
 
   dadosReferencia: Referencia = {
     valor: null,
-    dataExpiracao: this.transformaData(),
+    dataExpiracao: 'this.transformaData()',
     infPessoal: {
       descricao: 'MediaRumo',
-      nome: 'Media Rumo',
-      telefone: '222-721-738',
+      nome: null,
+      telefone: null,
       email: 'example@example.com',
     }
   };
@@ -52,18 +52,12 @@ export class AddReferenciaComponent implements OnInit {
     });
   }
 
-
-  onCancelar() {
-    // tslint:disable-next-line:no-unused-expression
-    this.router.navigate['/principal'];
-  }
-
   addDays(date: Date, dias: number): Date {
     date.setDate(date.getDate() + dias);
     return date;
   }
   transformaData() {
-    return this.addDays(this.hoje, 1).toLocaleDateString;
+    return this.addDays(this.hoje, 2).toLocaleDateString;
   }
   ngOnInit() {
   }
