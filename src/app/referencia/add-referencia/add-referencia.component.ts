@@ -36,7 +36,7 @@ export class AddReferenciaComponent implements OnInit {
   gerarReferencia(formReferencia: NgForm): void {
     this.apiReferencia.postReferencia(this.dadosReferencia).subscribe(
       res => {
-        this.snackBar.open(`A sua referência é:` + `res.referencia`, `OK`, {
+        this.snackBar.open(`A sua referência foi gerada com sucesso`, `OK`, {
           duration: 5000,
           panelClass: ['alert-success']
         });
