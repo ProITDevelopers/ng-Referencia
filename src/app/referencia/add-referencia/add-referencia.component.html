@@ -5,13 +5,25 @@
       <mat-form-field>
         <input matInput [matDatepicker]="picker" placeholder="Escolher data de Expiração"
                 name="dataExpiracao" [(ngModel)]="dadosReferencia.dataExpiracao"
-                [min]="minDate" disabled>
+                [min]="minDate">
         <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker disabled="false"></mat-datepicker>
       </mat-form-field>
 
       <mat-form-field>
         <input matInput type="number" placeholder="Valor" name="valor" [(ngModel)]="dadosReferencia.valor" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="text" placeholder="Cliente" name="nome" [(ngModel)]="dadosReferencia.infPessoal.nome" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="tel" placeholder="Telefone" name="telefone" [(ngModel)]="dadosReferencia.infPessoal.telefone" required>
+      </mat-form-field>
+
+      <mat-form-field>
+        <input matInput type="email" placeholder="Email" name="email" [(ngModel)]="dadosReferencia.infPessoal.email" required>
       </mat-form-field>
 
   </div>

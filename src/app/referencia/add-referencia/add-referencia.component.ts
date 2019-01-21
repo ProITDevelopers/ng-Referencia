@@ -21,7 +21,7 @@ export class AddReferenciaComponent implements OnInit {
     valor: null,
     dataExpiracao: this.transformaData(),
     infPessoal: {
-      descricao: 'criando',
+      descricao: 'MediaRumo',
       nome: 'Media Rumo',
       telefone: '222-721-738',
       email: 'example@example.com',
