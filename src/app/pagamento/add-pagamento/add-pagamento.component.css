@@ -8,3 +8,14 @@
   width: 60%;
   margin-left: 20%;
 }
+.aviso {
+  color: rgba(255, 0, 0, 0.7);
+  float: right;
+}
+
+.observacao {
+  color: rgba(150, 150, 150, 0.9);
+}
+.top {
+  margin-top: 2%;
+}
