@@ -22,7 +22,7 @@ export class AddPagamentoComponent implements OnInit {
   efectuarPagamento(formPagamento: NgForm): void {
     this.apiPagamento.postPagamento(this.dadosPagamento).subscribe(
       res => {
-        this.snackBar.open(`Pagamento Efectuado Com Sucesso!`, `OK`, {
+        this.snackBar.open(`Simulação Efectuada Com Sucesso!`, `OK`, {
           duration: 5000,
           panelClass: ['alert-success']
         });
@@ -31,7 +31,7 @@ export class AddPagamentoComponent implements OnInit {
         this.dadosPagamento.referencia = null;
       },
       err => {
-        this.snackBar.open(`Ocorreu um erro a efectuar pagamento`, `OK`, {
+        this.snackBar.open(`Ocorreu um erro a simular pagamento`, `OK`, {
           duration: 5000,
           panelClass: ['alert-danger']
         });

@@ -1,15 +1,15 @@
 <form (ngSubmit)="efectuarPagamento(efectuaPag)" #efectuaPag="ngForm">
-    <h3 style="text-align:center;">Efectuar Pagamento</h3>
+    <h3 style="text-align:center;">Simular Pagamento</h3>
   <div class="example-container">
       <mat-form-field>
-        <input matInput type="number" placeholder="Referência" name="referencia" [(ngModel)]="dadosPagamento.referencia">
+        <input matInput type="number" placeholder="Referência" name="referencia" [(ngModel)]="dadosPagamento.referencia" required>
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput type="number" placeholder="Valor" name="valor" [(ngModel)]="dadosPagamento.valor">
+        <input matInput type="number" placeholder="Valor" name="valor" [(ngModel)]="dadosPagamento.valor" required>
       </mat-form-field>
   </div>
   <div class="example-button-row">
-    <button mat-flat-button color="primary" type="submit">Confirmar</button>
+    <button mat-flat-button color="primary" type="submit" >Confirmar</button>
   </div>
 </form>
