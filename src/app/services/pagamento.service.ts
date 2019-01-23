@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class PagamentoService {
-  private principal_url = 'https://pagamento-reference.herokuapp.com';
+  private principal_url = 'https://proit-pagamento.herokuapp.com';
   private efectuar_pagamento_url = `${this.principal_url}/pagamento`;
 
   constructor(private http: HttpClient) { }
@@ -23,7 +23,7 @@ export class PagamentoService {
 
   createBasicAuth() {
     // tslint:disable-next-line:max-line-length
-    const cabecalho = '3f44e0a0120743e4883f3653a2c54999';
+    const cabecalho = '4a11a1b8d848431b9b65c2cbaa741beb';
     const authHeader = 'key ' + (cabecalho);
     return authHeader;
   }

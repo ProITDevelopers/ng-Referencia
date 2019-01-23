@@ -3,14 +3,12 @@ import { ReferenciaService } from 'src/app/services/referencia.service';
 import { Referencia } from 'src/app/shared/interfaces/referencia';
 import { NgForm } from '@angular/forms';
 import { MatSnackBar } from '@angular/material';
-import { DatePipe } from '@angular/common';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-add-referencia',
   templateUrl: './add-referencia.component.html',
   styleUrls: ['./add-referencia.component.css'],
-  providers: [DatePipe]
+  providers: []
 })
 export class AddReferenciaComponent implements OnInit {
   hoje = new Date;
@@ -23,15 +21,13 @@ export class AddReferenciaComponent implements OnInit {
     infPessoal: {
       descricao: 'MediaRumo',
       nome: null,
-      telefone: null,
+      telefone: '+244',
       email: 'example@example.com',
     }
   };
 
   constructor(private apiReferencia: ReferenciaService,
-              private snackBar: MatSnackBar,
-              private datePipe: DatePipe,
-              private router: Router) {}
+              private snackBar: MatSnackBar) {}
 
   gerarReferencia(formReferencia: NgForm): void {
     this.apiReferencia.postReferencia(this.dadosReferencia).subscribe(
@@ -46,7 +42,7 @@ export class AddReferenciaComponent implements OnInit {
         this.dadosReferencia.valor = null;
         this.dadosReferencia.dataExpiracao = null;
         this.dadosReferencia.infPessoal.nome = null;
-        this.dadosReferencia.infPessoal.telefone = null;
+        this.dadosReferencia.infPessoal.telefone = '+244';
       },
       err => {
         this.snackBar.open(`Ocorreu um erro a gerar referência!`, `OK`, {
@@ -55,6 +51,11 @@ export class AddReferenciaComponent implements OnInit {
         });
         console.log(this.dadosReferencia);
     });
+  }
+
+  telInputObject(obj) {
+    console.log(obj);
+    obj.intlTelInput('setCountry', 'ao');
   }
 
   addDays(date: Date, dias: number): Date {

@@ -23,7 +23,9 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput type="tel" placeholder="Telefone" name="telefone" [(ngModel)]="dadosReferencia.infPessoal.telefone" required>
+        <input matInput type="text" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'ao'}"
+               (intlTelInputObject)="telInputObject($event)"
+              name="telefone" [(ngModel)]="dadosReferencia.infPessoal.telefone" required/>
       </mat-form-field>
 
       <mat-form-field>

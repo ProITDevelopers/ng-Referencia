@@ -8,8 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class ReferenciaService {
-  private principal_url = 'https://proxy-reference.herokuapp.com/reference';
- // private gerar_Referencia_url = `${this.principal_url}/reference`;
+  private principal_url = 'https://proit-ref.herokuapp.com/reference';
 
   constructor(private http: HttpClient) { }
 
@@ -24,7 +23,7 @@ export class ReferenciaService {
 
   createBasicAuth() {
     // tslint:disable-next-line:max-line-length
-    const cabecalho = '3f44e0a0120743e4883f3653a2c54999';
+    const cabecalho = '4a11a1b8d848431b9b65c2cbaa741beb';
     const authHeader = 'key ' + (cabecalho);
     return authHeader;
   }
