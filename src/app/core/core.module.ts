@@ -8,6 +8,7 @@ import { DashboardComponent } from '../ui/dashboard/dashboard.component';
 
 import { MatToolbarModule, MatButtonModule, MatSidenavModule, MatIconModule, MatListModule, MatSelectModule } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { AddPagamentoComponent } from '../pagamento/add-pagamento/add-pagamento.component';
 
 @NgModule({
   declarations: [DashboardComponent],
