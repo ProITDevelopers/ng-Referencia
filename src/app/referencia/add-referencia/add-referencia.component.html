@@ -23,11 +23,10 @@
       </mat-form-field>
 
       <mat-form-field>
-        <input matInput type="text" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'ao'}"
+        <input matInput type="tel" ng2TelInput [ng2TelInputOptions]="{initialCountry: 'ao'}"
                (intlTelInputObject)="telInputObject($event)"
               name="telefone" [(ngModel)]="dadosReferencia.infPessoal.telefone" required/>
       </mat-form-field>
-
       <mat-form-field>
         <input matInput type="email" placeholder="Email" name="email" [(ngModel)]="dadosReferencia.infPessoal.email" required>
       </mat-form-field>

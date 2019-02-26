@@ -12,8 +12,8 @@ import { MatSnackBar } from '@angular/material';
 export class AddPagamentoComponent implements OnInit {
 
   dadosPagamento: Pagamento = {
-    referencia: null,
-    valor: null
+    valor: null,
+    codigoRerecence: null
   };
 
   constructor(private apiPagamento: PagamentoService,
@@ -28,7 +28,7 @@ export class AddPagamentoComponent implements OnInit {
         });
         console.log(this.dadosPagamento);
         this.dadosPagamento.valor = null;
-        this.dadosPagamento.referencia = null;
+        this.dadosPagamento.codigoRerecence = null;
       },
       err => {
         this.snackBar.open(`Ocorreu um erro a simular pagamento`, `OK`, {
